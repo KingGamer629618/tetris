@@ -15,4 +15,10 @@ export class Game {
     FAMILY: 'Arial, Helvetica, sans-serif',
     COLOR: 'white',
   };
+
+  public static render(delta: number, canvas: HTMLCanvasElement) {
+      var context = canvas.getContext("2d");
+
+      window.requestAnimationFrame((d) => this.render(d, canvas));
+  }
 }

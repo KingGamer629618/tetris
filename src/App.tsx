@@ -20,6 +20,8 @@ import { Line10 } from './shapes/Line10';
 import { LeftL } from './shapes/LeftL';
 import { Cube3 } from './shapes/Cube3';
 import { Cube2 } from './shapes/Cube2';
+import { KeyboardHandler } from './KeyboardHandler';
+import { Game } from './Game';
 
 function App() {
   ShapeRegistry.register(new Cube1());
@@ -43,6 +45,10 @@ function App() {
   ShapeRegistry.register(new TwinTowersThick());
 
   ShapeRegistry.closeRegistry();
+
+  KeyboardHandler.init();
+
+  window.requestAnimationFrame((timestamp) => {})
 
   return (
     <main>
