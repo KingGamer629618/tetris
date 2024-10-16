@@ -48,7 +48,7 @@ function App() {
 
   KeyboardHandler.init();
 
-  window.requestAnimationFrame((timestamp) => {})
+  window.requestAnimationFrame((d) => Game.render(d, document.getElementById("canvas") as HTMLCanvasElement))
 
   return (
     <main>
