@@ -1,24 +1,22 @@
-import { Shape } from './Shape';
+import { GuiGraphics } from "./GuiGraphics";
 
 export class Game {
-  static shapes: Shape[] = [];
+    public static arenaWidth = 15;
+    public static arenaHeight = 27;
+    public static screenWidth = 675;
+    public static screenHeight = 1215;
 
-  public static arenaWidth = 15;
-  public static arenaHeight = 27;
-  public static scale = 45;
-  public static dropInterval = 350;
-  public static dropKeyInterval = 44;
-  public static lockDelay = 450;
-  public static horizontalMovementInterval = 76;
+    public static scale = 45;
+    public static dropInterval = 350;
+    public static dropKeyInterval = 44;
+    public static lockDelay = 450;
+    public static horizontalMovementInterval = 76;
 
-  public static font = {
-    FAMILY: 'Arial, Helvetica, sans-serif',
-    COLOR: 'white',
-  };
+    public static async render(delta: number, canvas: HTMLCanvasElement) {
+        var graphics = new GuiGraphics(canvas.getContext("2d") as CanvasRenderingContext2D);
 
-  public static render(delta: number, canvas: HTMLCanvasElement) {
-      var context = canvas.getContext("2d");
+        graphics.drawRect('black', 0, 0, 675, 1215, false);
 
-      window.requestAnimationFrame((d) => this.render(d, canvas));
-  }
+        window.requestAnimationFrame((d) => this.render(d, canvas));
+    }
 }
