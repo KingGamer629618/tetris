@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class SmallT extends Shape {
   shape = [
@@ -9,5 +10,5 @@ export class SmallT extends Shape {
 
   weight = ShapeWeights.COMMON;
 
-  color = '#FF0D72';
+  color = Color.hex(0xFF0D72);
 }

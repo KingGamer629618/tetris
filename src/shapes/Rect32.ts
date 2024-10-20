@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class Rect32 extends Shape {
   shape = [
@@ -9,5 +10,5 @@ export class Rect32 extends Shape {
 
   weight = ShapeWeights.RARE;
 
-  color = '#e69c67';
+  color = Color.hex(0xe69c67);
 }

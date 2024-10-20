@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class Line5 extends Shape {
   shape = [
@@ -11,5 +12,5 @@ export class Line5 extends Shape {
 
   weight = ShapeWeights.COMMON;
 
-  color = '#0dffcb';
+  color = Color.hex(0x0dffcb);
 }

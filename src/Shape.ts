@@ -1,3 +1,5 @@
+import { Color } from "./renderer/Color";
+
 export type ShapeDefinition = number[][];
 
 export abstract class Shape {
@@ -5,7 +7,7 @@ export abstract class Shape {
 
     abstract weight: number;
 
-    abstract color: string;
+    abstract color: Color;
 
     public rotateCW90(): ShapeDefinition {
         const n = this.shape.length;

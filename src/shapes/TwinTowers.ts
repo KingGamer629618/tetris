@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class TwinTowers extends Shape {
   shape = [
@@ -10,5 +11,5 @@ export class TwinTowers extends Shape {
 
   weight = ShapeWeights.SUPER_RARE;
 
-  color = '#e3cf5d';
+  color = Color.hex(0xe3cf5d);
 }

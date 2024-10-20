@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class SuneLeft extends Shape {
   shape = [
@@ -8,5 +9,5 @@ export class SuneLeft extends Shape {
 
   weight = ShapeWeights.COMMON;
 
-  color = '#3877FF';
+  color = Color.hex(0x3877FF);
 }

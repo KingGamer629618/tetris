@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class Rect12 extends Shape {
   shape = [
@@ -8,5 +9,5 @@ export class Rect12 extends Shape {
 
   weight = ShapeWeights.VERY_COMMON;
 
-  color = '#701170';
+  color = Color.hex(0x701170);
 }

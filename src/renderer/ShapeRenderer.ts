@@ -1,5 +1,5 @@
 import { GuiGraphics } from "./GuiGraphics";
-import { Shape } from "./Shape";
+import { Shape } from "../Shape";
 
 export enum ShapeRotation {
     NORMAL,

@@ -1,5 +1,6 @@
-import { GuiGraphics } from "./GuiGraphics";
-import { ShapeRenderer, ShapeRotation } from "./ShapeRenderer";
+import { Color } from "./renderer/Color";
+import { GuiGraphics } from "./renderer/GuiGraphics";
+import { ShapeRenderer, ShapeRotation } from "./renderer/ShapeRenderer";
 import { SuneLeft } from "./shapes/SuneLeft";
 import { SuneRight } from "./shapes/SuneRight";
 import { TShape } from "./shapes/TShape";
@@ -19,7 +20,7 @@ export class Game {
     public static async render(delta: number, canvas: HTMLCanvasElement) {
         var graphics = new GuiGraphics(canvas.getContext("2d") as CanvasRenderingContext2D, delta);
 
-        graphics.drawRect('black', 0, 0, this.screenWidth, this.screenHeight, false);
+        graphics.drawRect(Color.hex(0x00), 0, 0, this.screenWidth, this.screenHeight, false);
 
         ShapeRenderer.renderShape(graphics, new TShape(), 5, 15, ShapeRotation.CW_180);
         ShapeRenderer.renderShape(graphics, new SuneLeft(), 2, 4, ShapeRotation.CCW_90);

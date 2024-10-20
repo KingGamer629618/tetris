@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class TShape extends Shape {
   shape = [
@@ -9,5 +10,5 @@ export class TShape extends Shape {
 
   weight = ShapeWeights.UNCOMMON;
 
-  color = '#B603FC';
+  color = Color.hex(0xB603FC);
 }

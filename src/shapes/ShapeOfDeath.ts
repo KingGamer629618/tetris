@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class ShapeOfDeath extends Shape {
   shape = [
@@ -16,5 +17,5 @@ export class ShapeOfDeath extends Shape {
 
   weight = ShapeWeights.SUPER_RARE;
 
-  color = '#2e264f';
+  color = Color.hex(0x2e264f);
 }

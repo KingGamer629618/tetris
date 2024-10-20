@@ -1,5 +1,5 @@
-import { Game } from './Game';
-import { Shape } from './Shape';
+import { Game } from '../Game';
+import { Color } from './Color';
 
 export class GuiGraphics {
     public static FONT = {
@@ -23,8 +23,8 @@ export class GuiGraphics {
         return p * Game.scale;
     }
 
-    public drawRect(color: string, x: number, y: number, width: number, height: number, sized = true) {
-        this.context.fillStyle = color;
+    public drawRect(color: Color, x: number, y: number, width: number, height: number, sized = true) {
+        this.context.fillStyle = color.toString();
 
         var rx = sized? this.resizePix(x) : x;
         var ry = sized? this.resizePix(y) : y;
@@ -33,16 +33,21 @@ export class GuiGraphics {
         this.context.fillRect(rx, ry, rw, rh);
     }
 
-    public drawString(text: string, color: string, x: number, y: number, sized = true) {
+    public drawString(text: string, color: Color, x: number, y: number, sized = true) {
         var rx = sized? this.resizePix(x) : x;
         var ry = sized? this.resizePix(y) : y;
         
         this.context.font = GuiGraphics.FONT.FAMILY;
-        this.context.fillStyle = color;
+        this.context.fillStyle = color.toString();
         this.context.fillText(text, rx, ry);
     }
 
-    public drawLine(color: string, x: number, y: number, z: number, sized = true) {
+    public drawLine(color: Color, thickness: number, x: number, y: number, x2: number, y2: number, sized = true) {
+        var rx = sized? this.resizePix(x) : x;
+        var ry = sized? this.resizePix(y) : y;
+        var rx2 = sized? this.resizePix(x2) : x2;
+        var ry2 = sized? this.resizePix(y2) : y2;
 
+        
     }
 }

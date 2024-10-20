@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class RightL extends Shape {
   shape = [
@@ -9,5 +10,5 @@ export class RightL extends Shape {
 
   weight = ShapeWeights.COMMON;
 
-  color = '#F538FF';
+  color = Color.hex(0xF538FF);
 }

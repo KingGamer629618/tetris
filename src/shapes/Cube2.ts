@@ -1,4 +1,5 @@
 import { Shape, ShapeWeights } from '../Shape';
+import { Color } from '../renderer/Color';
 
 export class Cube2 extends Shape {
   shape = [
@@ -8,5 +9,5 @@ export class Cube2 extends Shape {
 
   weight = ShapeWeights.COMMON;
 
-  color = '#0DC2FF';
+  color = Color.hex(0x0DC2FF);
 }
