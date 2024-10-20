@@ -1,6 +1,6 @@
 import { Shape, ShapeWeights } from '../Shape';
 
-export class TwinTowersThick implements Shape {
+export class TwinTowersThick extends Shape {
   shape = [
     [1, 1, 0, 0, 0, 1, 1],
     [1, 1, 0, 0, 0, 1, 1],

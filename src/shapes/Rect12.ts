@@ -1,6 +1,6 @@
 import { Shape, ShapeWeights } from '../Shape';
 
-export class Rect12 implements Shape {
+export class Rect12 extends Shape {
   shape = [
     [1, 1],
     [0, 0],

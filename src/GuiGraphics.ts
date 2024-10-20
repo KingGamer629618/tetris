@@ -8,34 +8,15 @@ export class GuiGraphics {
     };
     
     private context: CanvasRenderingContext2D;
+    private delta: number;
     
-    public constructor(context: CanvasRenderingContext2D) {
+    public constructor(context: CanvasRenderingContext2D, delta: number) {
         this.context = context;
+        this.delta = delta;
     }
 
-    public renderShape(
-        shape: Shape,
-        offsetX: number,
-        offsetY: number,
-        cellSize: number
-    ) {
-        for (var row = 0; row < shape.shape.length; row++) {
-            for (var col = 0; col < shape.shape[0].length; col++) {
-                if (shape.shape[row][col] > 0) {
-                    var cellValue = shape.shape[row][col];
-
-                    if (cellValue != 0) {
-                        this.context.fillStyle = shape.color;
-                        this.context.fillRect(
-                            (offsetX + col) * cellSize,
-                            (offsetY + row) * cellSize,
-                            cellSize,
-                            cellSize
-                        );
-                    }
-                }
-            }
-        }
+    public getDelta() {
+        return this.delta;
     }
 
     public resizePix(p: number): number {
@@ -59,5 +40,9 @@ export class GuiGraphics {
         this.context.font = GuiGraphics.FONT.FAMILY;
         this.context.fillStyle = color;
         this.context.fillText(text, rx, ry);
+    }
+
+    public drawLine(color: string, x: number, y: number, z: number, sized = true) {
+
     }
 }

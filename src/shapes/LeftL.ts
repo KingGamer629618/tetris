@@ -1,6 +1,6 @@
 import { Shape, ShapeWeights } from '../Shape';
 
-export class LeftL implements Shape {
+export class LeftL extends Shape {
   shape = [
     [0, 1, 0],
     [0, 1, 0],

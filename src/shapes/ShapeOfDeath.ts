@@ -1,6 +1,6 @@
 import { Shape, ShapeWeights } from '../Shape';
 
-export class ShapeOfDeath implements Shape {
+export class ShapeOfDeath extends Shape {
   shape = [
     [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
     [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
