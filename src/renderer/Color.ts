@@ -1,4 +1,26 @@
 export class Color {
+    public static RED = Color.rgb(255, 0, 0);
+    public static GREEN = Color.rgb(0, 255, 0);
+    public static BLUE = Color.rgb(0, 0, 255);
+    public static BLACK = Color.rgb(0, 0, 0);
+    public static WHITE = Color.rgb(255, 255, 255);
+    public static YELLOW = Color.rgb(255, 255, 0);
+    public static ORANGE = Color.rgb(255, 165, 0);
+    public static PURPLE = Color.rgb(128, 0, 128);
+    public static CYAN = Color.rgb(0, 255, 255);
+    public static MAGENTA = Color.rgb(255, 0, 255);
+    public static GRAY = Color.rgb(128, 128, 128);
+    public static DARK_GRAY = Color.rgb(64, 64, 64);
+    public static LIGHT_GRAY = Color.rgb(192, 192, 192);
+    public static PINK = Color.rgb(255, 192, 203);
+    public static BROWN = Color.rgb(165, 42, 42);
+    public static LIGHT_BLUE = Color.rgb(173, 216, 230);
+    public static DARK_BLUE = Color.rgb(0, 0, 139);
+    public static LIME = Color.rgb(50, 205, 50);
+    public static GOLD = Color.rgb(255, 215, 0);
+    public static SILVER = Color.rgb(192, 192, 192);
+    public static BRONZE = Color.rgb(205, 127, 50);
+
     public static hex(hexadecimal: number) {
         return this.hexAlpha(hexadecimal, 1.0);
     }

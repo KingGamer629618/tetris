@@ -41,13 +41,4 @@ export class GuiGraphics {
         this.context.fillStyle = color.toString();
         this.context.fillText(text, rx, ry);
     }
-
-    public drawLine(color: Color, thickness: number, x: number, y: number, x2: number, y2: number, sized = true) {
-        var rx = sized? this.resizePix(x) : x;
-        var ry = sized? this.resizePix(y) : y;
-        var rx2 = sized? this.resizePix(x2) : x2;
-        var ry2 = sized? this.resizePix(y2) : y2;
-
-        
-    }
 }
